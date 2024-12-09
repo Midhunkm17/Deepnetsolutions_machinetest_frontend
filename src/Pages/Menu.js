@@ -20,11 +20,11 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: {md:400,xs:350},
   bgcolor: "black",
   border: "2px solid #000",
   boxShadow: 24,
-  p: 4,
+  p:2
 };
 
 const Menu = () => {
@@ -331,17 +331,33 @@ const Menu = () => {
             </Button>
 
             <Button
+            size="small"
               sx={{
-                width: 100,
+                width: 120,
                 bgcolor: "#0796EF",
                 color: "white",
                 fontSize: 17,
-                borderRadius: 0,
+                borderRadius: 1,
                 mt: 3,
               }}
               onClick={handleAddMenu}
             >
               Add Menu
+            </Button>
+            <Button
+            size="small"
+              sx={{
+                width: 120,
+                bgcolor: "red",
+                color: "white",
+                fontSize: 17,
+                borderRadius: 1,
+                mt: 3,
+                ml:2
+              }}
+              onClick={()=>setOpen(false)}
+            >
+              Cancel
             </Button>
           </Box>
         </Modal>
