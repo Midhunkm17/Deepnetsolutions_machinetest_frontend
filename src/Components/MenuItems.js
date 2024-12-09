@@ -42,12 +42,12 @@ const MenuItems = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: 79,
+          height: 90,
           width: "100%",
         }}
       >
         <Stack
-          mt={3}
+          mt={{md:2.5,xs:3.5}}
           direction={"row"}
           flexWrap={"wrap"}
           justifyContent={"center"}
@@ -102,7 +102,7 @@ const MenuItems = () => {
             border={"1px solid #FFFFFF"}
             m={{ md: 5, xs: 2.5 }}
             position={"relative"}
-            width={{ md: "100%", xs: 390 }}
+            width={'100% !important'}
           >
             <Box
               sx={{
@@ -146,11 +146,11 @@ const MenuItems = () => {
               display={{ md: "flex", xs: "block" }}
               flexDirection={"row"}
               flexWrap={"wrap"}
-              ml={{ md: 22, xs: 2.5 }}
+              ml={{ md: 22, xs: 2 }}
               mt={4}
-              gap={{ md: 3, xs: 2 }}
+              gap={{ md: 7, xs: 2 }}
               width={"100%"}
-              spacing={{ md: 0, xs: 2 }}
+              spacing={{ md: 0, xs: 5 }}
             >
               {filteredMenuItems?.length > 0 ? (
                 filteredMenuItems.map((item, index) => (
@@ -166,8 +166,9 @@ const MenuItems = () => {
                       {item.itemPrice.toFixed(2)}
                     </Typography>
                     <Typography
-                      width={{ md: 605, xs: "auto" }}
+                     position={'absolute'}
                       component={"p"}
+                      mt={1}
                       color="#FFFFFFBF"
                       fontSize={{ md: 18, xs: 12 }}
                     >
