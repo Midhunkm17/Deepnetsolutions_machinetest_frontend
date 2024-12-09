@@ -47,7 +47,7 @@ const MenuItems = () => {
         }}
       >
         <Stack
-          mt={2}
+          mt={3}
           direction={"row"}
           flexWrap={"wrap"}
           justifyContent={"center"}
@@ -100,7 +100,7 @@ const MenuItems = () => {
           />
           <Stack
             border={"1px solid #FFFFFF"}
-            m={{ md: 5, xs: 3 }}
+            m={{ md: 5, xs: 2.5 }}
             position={"relative"}
             width={{ md: "100%", xs: 390 }}
           >
@@ -108,7 +108,7 @@ const MenuItems = () => {
               sx={{
                 position: "absolute",
                 top: { md: "-25%", xs: "0%" },
-                left: { md: "-3.5%", xs: "1%" },
+                left: { md: "-3.5%", xs: "-3%" },
                 zIndex: 1,
               }}
               component={"img"}
@@ -157,19 +157,19 @@ const MenuItems = () => {
                   <Box>
                     <Typography
                       component={"h5"}
-                      fontSize={{ md: 28, xs: 16 }}
+                      fontSize={{ md: 28, xs: 15 }}
                       fontWeight={400}
                       color="white"
                     >
                       {item.itemName}
-                      ..................................................$
+                      ...............................................$
                       {item.itemPrice.toFixed(2)}
                     </Typography>
                     <Typography
                       width={{ md: 605, xs: "auto" }}
                       component={"p"}
                       color="#FFFFFFBF"
-                      fontSize={{ md: 18, xs: 13 }}
+                      fontSize={{ md: 18, xs: 12 }}
                     >
                       {item.itemDescription}
                     </Typography>
@@ -189,10 +189,10 @@ const MenuItems = () => {
                 <Typography
                   component={"h6"}
                   color="white"
-                  fontSize={{ md: 40, xs: 20 }}
+                  fontSize={{ md: 40, xs: 17 }}
                   mt={5}
                   textAlign="center"
-                  width={{ md: "auto", xs: 350 }}
+                  width={{ md: "auto", xs: 320 }}
                 >
                   <marquee>
                     What’s on your mind?{" "}
@@ -208,7 +208,7 @@ const MenuItems = () => {
                   sx={{
                     position: "absolute",
                     top: { md: "68%", xs: "81%" },
-                    left: { md: "87.5%", xs: "82%" },
+                    left: { md: "87.5%", xs: "79.5%" },
                     zIndex: 0,
                   }}
                   component={"img"}
