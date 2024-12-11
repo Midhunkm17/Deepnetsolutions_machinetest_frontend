@@ -52,7 +52,7 @@ const Menu = () => {
     });
   };
 
-  // Handle input changes for items directly using spread
+  // Handle input changes for items
   const handleItemChange = (index, name, value) => {
     setMenu((prevMenu) => {
       const updatedItems = [...prevMenu.items];
@@ -118,12 +118,11 @@ const Menu = () => {
           //   console.log(err);
         });
     } catch (validationError) {
-      // If validation fails, set the errors in the formErrors state
       const errors = {};
       validationError.inner.forEach((error) => {
-        errors[error.path] = error.message; // Assign error message to the respective field
+        errors[error.path] = error.message; 
       });
-      setFormErrors(errors); // Set errors to state
+      setFormErrors(errors); 
     }
   };
 
